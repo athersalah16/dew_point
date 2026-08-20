@@ -1,0 +1,11 @@
+the plan is:
+
+| NavLink           | Content                                                                                                             |
+| ----------------- | ------------------------------------------------------------------------------------------------------------------- |
+| **Home**          | Hero + short company introduction + key capabilities + CTA                                                          |
+| **About Us**      | Who We Are + Vision + Mission + Core Values                                                                         |
+| **Services**      | Integrated Supply Solutions + Technical & Project Services + Supply Chain & Logistics                               |
+| **Industries**    | Oil & Gas + Energy + Petrochemical + Power & Utilities + Infrastructure & Construction + Industrial & Manufacturing |
+| **Projects**      | Major Clients + Project Experience                                                                                  |
+| **Why Dew Point** | Competitive advantages + global sourcing + technical expertise + responsive service + end-to-end coordination       |
+| **Contact**       | Abu Dhabi/Dubai + email + phone + RFQ/contact form                                                                  |
