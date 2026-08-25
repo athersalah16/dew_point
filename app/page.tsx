@@ -9,7 +9,7 @@ import WhyDewPointSection from "./components/WhyDewPointSection";
 
 export default function Home() {
   return (
-    <div className="w-full space-y-12   min-h-screen bg-white">
+    <div className="w-full space-y-24   min-h-screen bg-white">
       <NavBar/>
       <HeroSection/>
       <AboutSection/>

@@ -3,7 +3,7 @@ type Props = {
   children: React.ReactNode;
   sectionID: string;
   className?: string;
-  title: string;
+  title?: string;
  
   
 };

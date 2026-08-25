@@ -8,6 +8,7 @@ import { X, Menu } from "lucide-react";
 function NavBar() {
   const [isScrolled, setIsScrolled] = useState<boolean>(false);
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
+  const [navLink, setNavLink] = useState<string>("Home");
 
   useEffect(() => {
     const handleScroll = () => {
@@ -17,34 +18,50 @@ function NavBar() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-  const handleClick = () => {
+  const handleMenuClick = () => {
     setIsMenuOpen((prev) => !prev);
-    
   };
-  const textStyle = 'hover:text-white hover:bg-blue-500'
+
+  const textStyle = "hover:text-white hover:bg-blue-500";
   return (
     <div
       className={`flex flex-row items-center justify-between w-full px-4 py-2 fixed  z-50 bg-white ${isScrolled ? " border-gray-400  shadow-md " : " border-gray-200 "} border-b  transition-all duration-300`}
     >
       <div>
-        <Logo  className="text-blue-400"/>
+        <Logo className="text-blue-400" />
       </div>
 
       <div className="hidden lg:flex ">
-        <NavLinks className="flex-row gap-4 " textStyle={textStyle}/>
+        <NavLinks
+          navLink={navLink}
+          handleClick={setNavLink}
+          className="flex-row gap-4 "
+          textStyle={textStyle}
+        />
       </div>
 
-      <div onClick={handleClick} className="lg:hidden w-12 h-12 items-center flex justify-center  text-black cursor-pointer">
-        {isMenuOpen ?  <X /> : <Menu /> }
+      <div
+        onClick={handleMenuClick}
+        className="lg:hidden w-12 h-12 items-center flex justify-center  text-black cursor-pointer"
+      >
+        {isMenuOpen ? <X /> : <Menu />}
       </div>
       {isMenuOpen && (
-        <div  className={`lg:hidden min-h-screen fixed top-24 left-0 w-full py-3  px-4 rounded-md bg-zinc-50 shadow-xl transition-transform duration-300 ${isMenuOpen ? "translate-y-0" : "-translate-y-full"}`}>
-          <NavLinks textStyle={textStyle} className="flex-col hover:text-blue-950 hover:bg-gray-100 gap-4 py-4" />
-          <RequestQouteButton  />
+        <div
+          className={`lg:hidden min-h-screen fixed top-16 left-0 w-full py-3  px-4 rounded-md bg-zinc-50 shadow-xl transition-transform duration-300 ${isMenuOpen ? "translate-y-0" : "-translate-y-full"}`}
+        >
+          <NavLinks
+            handleMenuClick={setIsMenuOpen}
+            navLink={navLink}
+            handleClick={setNavLink}
+            textStyle={textStyle}
+            className="flex-col hover:text-blue-950 hover:bg-gray-100 gap-4 py-4"
+          />
+          <RequestQouteButton />
         </div>
       )}
       <div className="hidden lg:flex">
-        <RequestQouteButton  />
+        <RequestQouteButton />
       </div>
     </div>
   );

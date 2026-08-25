@@ -7,13 +7,13 @@ function ServicesSection() {
   return (
     <BaseSection title="services" sectionID="services">
       <div className="w-full gap-5 flex flex-col">
-        <div>
+        <div className="w-full ">
           <h2 className="text-4xl text-blue-400  font-bold leading-tight tracking-tight sm:text-5xl lg:text-6xl">
             Integrated Supply.
             <br />
             <span className="text-blue-900">Technical Expertise.</span>
           </h2>
-          <p className="mt-6 max-w-2xl text-base leading-7 text-gray-300 sm:text-lg">
+          <p className="mt-6 max-w-2xl text-base leading-7 text-gray-500 sm:text-lg">
             Comprehensive sourcing and supply solutions tailored to the
             technical, commercial, and delivery requirements of industrial and
             EPC projects.

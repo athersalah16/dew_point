@@ -31,7 +31,7 @@ function HeroSection() {
           <a href="/company_profile.pdf" download className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded flex flex-row items-center gap-2 w-fit">
            <Download/> Company Profile
           </a>
-          <a href="#services" className=" bg-transparent border border-gray-300 hover:bg-blue-600 hover:border-none text-white duration-300 font-bold py-2 px-4 rounded flex flex-row items-center gap-2 w-fit">
+          <a href="#services"  className=" bg-transparent border border-gray-300 hover:bg-blue-600 hover:border-none text-white duration-300 font-bold py-2 px-4 rounded flex flex-row items-center gap-2 w-fit">
            Explore Services
           </a>
         </div>

@@ -1,9 +1,9 @@
 import BaseSection from "./BaseSection";
 import { whoWeAre } from "../company_data/whoWeAre";
 import VissionAndMission from "./VissionAndMission";
-import CoreValues from "./CoreValues";
+import ProcessTimeline from "./ProcessTimeline";
 import { coreValues } from "../company_data/coreValues";
-import { ArrowRight, ShieldCheck } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 function AboutSection() {
   return (
@@ -28,7 +28,7 @@ function AboutSection() {
               </h2>
               <div className="w-full grid  grid-cols-1 py-3  md:grid-cols-2 lg:grid-cols-6 ">
                 {coreValues.map((item, index) => (
-                  <CoreValues key={index + 1} data={item} index={index} />
+                  <ProcessTimeline className="text-white" key={index + 1} data={item} index={index} />
                 ))}
               </div>
             </div>
