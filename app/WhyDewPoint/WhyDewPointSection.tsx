@@ -2,6 +2,7 @@ import { endToEndCoordination } from "../company_data/endToEndCoporeation";
 import { whyDewPoint } from "../company_data/why_dew_point";
 import BaseSection from "../components/BaseSection";
 import ProcessTimeline from "../components/ProcessTimeline";
+import RFQToDelivery from "./RFQToDelivery";
 
 function WhyDewPointSection() {
   return (
@@ -27,20 +28,13 @@ function WhyDewPointSection() {
             />
           ))}{" "}
         </div>
-        <div className="flex flex-col gap-4 ">
-          <h3 className="text-blue-950 font-bold text-2xl text-center ">
+        <div className="flex flex-col gap-2 w-full justify-center items-center  ">
+          <h3 className="text-blue-700 font-bold text-3xl lg:text-4xl text-center ">
             From RFQ to Delivery
           </h3>
 
-          <div className="border  border-blue-500 grid  grid-cols-1  rounded-md  md:grid-cols-2 lg:grid-cols-8 py-5  w-full">
-            {endToEndCoordination.map((data, index) => (
-              <ProcessTimeline
-                className="text-blue-600"
-                data={data}
-                index={index}
-                key={index + 1}
-              />
-            ))}
+          <div className="w-full flex justify-center items-center">
+            <RFQToDelivery />
           </div>
         </div>
       </div>

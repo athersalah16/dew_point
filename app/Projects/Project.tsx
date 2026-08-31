@@ -8,7 +8,7 @@ function Project({ project }: { project: ProjectType }) {
       <div className="w-8 h-8 flex justify-center items-center font-bold  bg-blue-900 text-white rounded-md ">
         {id}
       </div>
-      <div className=" text-sm font-semibold text-blue-900">{name}</div>
+      <div className=" text-sm text-blue-600    font-semibold lg:font-bold lg:text-blue-900">{name}</div>
       <div className="flex flex-col">
         <p className="text-blue-500 text-xs">client</p>
         <Image src={'/adnoc.png'} alt="client logo" width={50} height={50}/>

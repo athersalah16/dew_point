@@ -18,7 +18,7 @@ function IndustrialSection() {
             and project support services.
           </p>
         </div>
-        <div className="grid grid-cols-1 lg:grid-cols-4 md:grid-cols-2 px-4 py-6  gap-4">
+        <div className="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 px-4 py-6  gap-4">
           {industries.map((service, index) => (
             <ServicesAndIndustries key={index + 1} id={index} data={service} />
           ))}

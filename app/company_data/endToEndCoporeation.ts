@@ -8,7 +8,7 @@ import {
   PackageCheck,
   Headset,
 } from "lucide-react";
-import {  EndToEnd } from "../types/endToEndType";
+import EndToEnd from "../types/endToEndType";
 
 export const endToEndCoordination:EndToEnd[] = [
   {

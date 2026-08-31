@@ -1,9 +1,14 @@
+"use client";
+import Image from "next/image";
 import GetInTouch from "../Contact/GetInTouch";
+import { useNavBar } from "../context/NavBarProvider";
 import Logo from "../Header/Logo";
 import NavLinks from "../Header/NavLinks";
 
 function Footer() {
-  const logoTextStyle = `text-white text-blue-500`
+  const logoTextStyle = `text-white text-blue-500`;
+  const { navLink } = useNavBar();
+
   return (
     <div className="flex w-full min-h-full  items-center flex-col bg-blue-950  ">
       <div className=" w-full flex flex-col py-5 lg:flex-row lg:justify-between">
@@ -21,6 +26,8 @@ function Footer() {
         <div>
           <p className="text-gray-400 px-2 ">Navigate</p>
           <NavLinks
+            navLink={navLink}
+            navLinkStyle=" text-white"
             className="flex-col"
             textStyle="text-gray-600 hover:text-white"
           />
@@ -36,10 +43,16 @@ function Footer() {
           &copy; {new Date().getFullYear()} Dew Point Trading. All rights
           reserved.
         </p>
-        <div className=" flex flex-col lg:flex-row gap-6">
+        <div className=" flex   flex-row gap-6">
           {" "}
-          <p className="text-gray-400  text-sm">UAE ICV Certified</p>
-          <p className="text-gray-400 text-sm ">ISO 9001:2015</p>
+          <div className=" flex lg:flex-row flex-col justify-center gap-4 items-center text-white  text-sm" >
+            <Image src={"/icv_logo.png"} alt="ICV Image" width={50} height={50} /> UAE ICV Certified
+          </div>
+          <div className=" text-sm flex lg:flex-row flex-col justify-center gap-4 items-center text-white ">
+            {" "}
+            <Image src={"/iso_logo.png"} alt="ISO Image" width={50} height={50}  />
+            ISO 9001:2015
+          </div>
         </div>
       </div>
     </div>

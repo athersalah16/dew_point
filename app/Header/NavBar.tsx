@@ -4,12 +4,11 @@ import Logo from "./Logo";
 import NavLinks from "./NavLinks";
 import RequestQouteButton from "../components/RequestQouteButton";
 import { X, Menu } from "lucide-react";
+import { useNavBar } from "../context/NavBarProvider";
 
 function NavBar() {
   const [isScrolled, setIsScrolled] = useState<boolean>(false);
-  const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
-  const [navLink, setNavLink] = useState<string>("Home");
-
+  const { navLink, setIsMenuOpen, isMenuOpen } = useNavBar();
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
@@ -33,8 +32,8 @@ function NavBar() {
 
       <div className="hidden lg:flex ">
         <NavLinks
+          navLinkStyle="bg-blue-500 text-white"
           navLink={navLink}
-          handleClick={setNavLink}
           className="flex-row gap-4 "
           textStyle={textStyle}
         />
@@ -52,8 +51,8 @@ function NavBar() {
         >
           <NavLinks
             handleMenuClick={setIsMenuOpen}
+            navLinkStyle="bg-blue-500 text-white"
             navLink={navLink}
-            handleClick={setNavLink}
             textStyle={textStyle}
             className="flex-col hover:text-blue-950 hover:bg-gray-100 gap-4 py-4"
           />

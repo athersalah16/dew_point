@@ -9,7 +9,7 @@ function ChatOnWhatsappButton() {
   }
   return (
    
-      <button onClick={handleClick} className="bg-green-500 flex flex-row  gap-3 cursor-pointer justify-center items-center text-white py-2 px-4 rounded-md hover:bg-green-600 transition-colors duration-300">
+      <button onClick={handleClick} className="border-none outline-none bg-green-500 flex flex-row  gap-3 cursor-pointer justify-center items-center text-white py-2 px-4 rounded-md hover:bg-green-600 transition-colors duration-300">
         <FaWhatsapp/> Chat on WhatsApp
       </button>
     

@@ -1,7 +1,7 @@
 import { type ContactInfo } from "../types/contactType";
 
 export const contactInfo: ContactInfo[] = [
-  { text: "info@dewpoint-uae.com", icon: "Mail" },
-  { text: " +971 502387010", icon: "Phone" },
-  { text: "Abu Dhabi, Dubai", icon: "MapPin" },
+  { text: "info@dewpoint-uae.com", icon: "Mail" ,category:"email"},
+  { text: " +971 502387010", icon: "Phone" ,category:"phone"},
+  { text: "Abu Dhabi, Dubai", icon: "MapPin" ,category:"location"},
 ];

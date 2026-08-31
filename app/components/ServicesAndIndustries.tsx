@@ -6,7 +6,7 @@ type Props = {
 function ServicesAndIndustries({ data, id }: Props) {
   const { icon: Icon, text, description } = data;
   return (
-    <div key={id} className="transition-all ease-in-out  bg-transparent text-gray-600 cursor-pointer  transform hover:scale-105  border border-gray-200  rounded-md hover:bg-blue-900 px-4 py-5 hover:text-white">
+    <div key={id} className="transition-all hover:-translate-y-1.5 ease-in-out  bg-transparent text-gray-600 cursor-pointer  transform hover:scale-105  border border-gray-200  rounded-md hover:bg-blue-900 px-4 py-5 hover:text-white">
       <div className="flex py-3  gap-4 flex-row">
         <div className="w-12 h-12 bg-blue-800 rounded-full px-3 py-3 text-white text-2xl">
           {" "}

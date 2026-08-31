@@ -112,10 +112,10 @@ function RequestQuoteForm() {
         <button
           type="submit"
           disabled={loading}
-          className={`bg-blue-600 flex flex-row gap-3 justify-center items-center text-white py-2 px-4 rounded-md hover:bg-blue-800 focus:outline-none cursor-pointer  ${loading && "opacity-50 cursor-not-allowed"}`}
+          className={`bg-blue-600 flex flex-row gap-3 justify-center items-center text-white py-2 px-4 rounded-md hover:bg-blue-800 focus:outline-none cursor-pointer  ${loading && " cursor-not-allowed"}`}
         >
           {loading && (
-            <div className="animate-spin border w-5 h-5  rounded-full border-blue-900" />
+            <div className="animate-spin  w-5 h-5  border-2  border-gray-200 border-t-blue-400  rounded-full " />
           )}
           {loading ? "Sending" : "Send message"}
         </button>
