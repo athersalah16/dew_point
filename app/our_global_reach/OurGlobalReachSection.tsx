@@ -9,7 +9,7 @@ import { MapPin } from "lucide-react";
 import DisplayCertifications from "./DisplayCertifications";
 
 function OurGlobalReachSection() {
-  const [activeMarket, setActiveMarket] = useState<string| null>(null);
+  const [activeMarket, setActiveMarket] = useState<MarketKey| string>('');
   const position = activeMarket ? marketPositions[activeMarket] : null;
 
   return (

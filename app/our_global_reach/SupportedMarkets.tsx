@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { MarketKey } from "../market_positions/marketPositions";
 
 type Props = {
-  setActiveMarket: React.Dispatch<React.SetStateAction<string | null>>;
+  setActiveMarket: React.Dispatch<React.SetStateAction<MarketKey  | string>>;
 };
 
 function SupportedMarkets({  setActiveMarket }: Props) {
@@ -16,7 +16,7 @@ function SupportedMarkets({  setActiveMarket }: Props) {
     "Australia",
   ];
 
-  const [selectedMarket, setSelectedMarket] = useState<string | null>(null);
+  const [selectedMarket, setSelectedMarket] = useState<MarketKey  | string>('');
 
   const handleHover = (country: string) => {
     setActiveMarket(country);
