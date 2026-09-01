@@ -1,36 +1,37 @@
+
 import { ProjectType } from "../types/projectType";
 
 export const projects: ProjectType[] = [
   {
     id: 1,
-    name: "BU HASA SWAG FOR PILOT",
+    name: "Bu hasa swag for pilot",
   },
   {
     id: 2,
-    name: "WAVE COMPONENT 3A",
+    name: "Wave component 3a",
   },
   {
     id: 3,
-    name: "WAVE COMPONENT 3A",
+    name: "Wave component 3a",
   },
   {
     id: 4,
-    name: "HABSHAN PROJECTS",
+    name: "Habshan projects",
   },
   {
     id: 5,
-    name: "CONSTRUCTION OF RDS-3 & RDS-4 AND ASSOCI AIP5",
+    name: "Construction of rds-3 & rds-4 and associ aip5",
   },
   {
     id: 6,
-    name: "KENT-BAB FAR NORTH HDPE LINER WORK PKG2",
+    name: "Kent-bab far north hdpe liner work pkg2",
   },
   {
     id: 7,
-    name: "MEI WORS FOR PACKAGE SP-4 FOR MERAM SP04",
+    name: "Mei wors for package sp-4 for meram sp04",
   },
   {
     id: 8,
-    name: "MERAM PROJECT PL PACKAGE PL 02",
+    name: "Meram project pl package pl 02",
   },
 ];

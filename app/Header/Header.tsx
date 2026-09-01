@@ -6,7 +6,7 @@ import RequestQouteButton from "../components/RequestQouteButton";
 import { X, Menu } from "lucide-react";
 import { useNavBar } from "../context/NavBarProvider";
 
-function NavBar() {
+function Header() {
   const [isScrolled, setIsScrolled] = useState<boolean>(false);
   const { navLink, setIsMenuOpen, isMenuOpen } = useNavBar();
   useEffect(() => {
@@ -24,7 +24,7 @@ function NavBar() {
   const textStyle = "hover:text-white hover:bg-blue-500";
   return (
     <div
-      className={`flex flex-row items-center justify-between w-full px-4 py-2 fixed  z-50 bg-white ${isScrolled ? " border-gray-400  shadow-md " : " border-gray-200 "} border-b  transition-all duration-300`}
+      className={`flex fixed flex-row items-center justify-between w-full px-4 py-2   z-50 bg-white ${isScrolled ? " border-gray-300  shadow-md lg:shadow-lg shadow-gray-300 " : " border-gray-200 "} border-b  transition-all duration-300`}
     >
       <div>
         <Logo className="text-blue-400" />
@@ -66,4 +66,4 @@ function NavBar() {
   );
 }
 
-export default NavBar;
+export default Header;

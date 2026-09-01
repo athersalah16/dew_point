@@ -26,7 +26,7 @@ function HowCanWeHelp() {
       >
         {capabilities.map(({ label, icon: Icon }, index) => (
           <li key={label} className="flex items-start gap-3">
-            <p className="text-blue-600 font-bold">{index + 1}</p>
+            <p className="text-blue-600 font-bold">{index + 1}. </p>
             <Icon
               aria-hidden="true"
               className="mt-0.5 size-5 shrink-0 text-blue-600"

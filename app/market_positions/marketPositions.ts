@@ -13,12 +13,12 @@ export type MarketKey =
   | "Australia";
 
 export const marketPositions: Record<MarketKey, MarketPosition> = {
-  "North America": {
+   "North America": {
     top: "32%",
     left: "12%",
   },
-  "South America": {
-    top: "70%",
+   "South America": {
+    top: "80%",
     left: "23%",
   },
   Europe: {
@@ -29,16 +29,17 @@ export const marketPositions: Record<MarketKey, MarketPosition> = {
     top: "44%",
     left: "60%",
   },
-  Africa: {
-    top: "64%",
-    left: "54%",
+    "Africa": {
+    top: "80%",
+    left: "50%",
   },
-  Asia: {
+  "Asia": {
     top: "38%",
     left: "74%",
   },
-  Australia: {
-    top: "72%",
+  "Australia": {
+    top: "87%",
     left: "87%",
   },
 };
+

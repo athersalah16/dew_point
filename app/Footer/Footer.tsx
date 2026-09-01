@@ -13,7 +13,7 @@ function Footer() {
     <div className="flex w-full min-h-full  items-center flex-col bg-blue-950  ">
       <div className=" w-full flex flex-col py-5 lg:flex-row lg:justify-between">
         <div className="flex flex-col py-5 gap-4 items-center lg:items-start px-3">
-          <Logo className={logoTextStyle} />
+          <Logo AddBackground={true} className={logoTextStyle} />
           <div className="text-gray-500 px-3  text-md max-w-md flex justify-center  ">
             A UAE-based supply and technical services partner delivering
             engineered material packages, procurement and logistics support to
@@ -45,12 +45,27 @@ function Footer() {
         </p>
         <div className=" flex   flex-row gap-6">
           {" "}
-          <div className=" flex lg:flex-row flex-col justify-center gap-4 items-center text-white  text-sm" >
-            <Image src={"/icv_logo.png"} alt="ICV Image" width={50} height={50} /> UAE ICV Certified
+          <div className=" flex lg:flex-row flex-col justify-center gap-4 items-center text-white  text-sm">
+            <div className="w-12 h-8 bg-white p-2 rounded-md">
+              <Image
+                src={"/icv_logo.png"}
+                alt="ICV Image"
+                width={50}
+                height={50}
+              />{" "}
+            </div>
+            UAE ICV Certified
           </div>
           <div className=" text-sm flex lg:flex-row flex-col justify-center gap-4 items-center text-white ">
             {" "}
-            <Image src={"/iso_logo.png"} alt="ISO Image" width={50} height={50}  />
+            <div className="w-12 h-12 bg-white p-2 rounded-md">
+              <Image
+                src={"/iso_logo.png"}
+                alt="ISO Image"
+                width={50}
+                height={50}
+              />
+            </div>
             ISO 9001:2015
           </div>
         </div>

@@ -50,14 +50,14 @@ function RequestQuoteForm() {
 
   const textStyle = `outline-none border text-black border-gray-300 rounded-md py-2 px-4 focus:ring-2  focus:ring-blue-500 ${error ? "focus:ring-red-500 border-red-500 focus:ring-2 " : ""}`;
   return (
-    <div className="w-full lg:w-[600px] bg-gray-100 p-8 rounded-lg shadow-md">
-      <h1 className="text-blue-950 pb-2 text-2xl font-bold text-center">
+    <div className="w-full lg:w-[600px] bg-gray-100 p-1 lg:p-8  rounded-lg shadow-md">
+      <h1 className="text-blue-950 py-2 lg:pb-2 text-xl lg:text-3xl font-bold text-center">
         {" "}
         Request a Quote{" "}
       </h1>
-      {error && <p className="text-2xl text-center text-red-500">{error}</p>}
+      {error && <p className="text-lg lg:text-2xl text-center text-red-500">{error}</p>}
       {success && (
-        <p className="text-2xl text-center text-green-500">
+        <p className="text-lg lg:text-2xl text-center text-green-500">
           Request submitted successfully!
         </p>
       )}
@@ -71,7 +71,7 @@ function RequestQuoteForm() {
           <input
             type="text"
             name="name"
-            placeholder="Enter your full name: "
+            placeholder="Full name: "
             className={textStyle}
           />
           <input

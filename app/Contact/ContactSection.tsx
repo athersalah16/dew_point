@@ -10,7 +10,7 @@ function ContactSection() {
       <div className="flex flex-col gap-6 ">
         <div>
           {" "}
-          <h1 className="text-3xl  text-center font-bold text-blue-900 ">
+          <h1 className="text-2xl lg:text-3xl   text-center font-bold text-blue-900 ">
             Let’s Build Better Solutions Together
           </h1>
         </div>{" "}

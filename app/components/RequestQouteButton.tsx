@@ -1,10 +1,10 @@
 import { useNavBar } from "../context/NavBarProvider";
 
 function RequestQouteButton() {
-  const { setNavLink, navLink, setIsMenuOpen } = useNavBar();
+  const { setNavLink, setIsMenuOpen } = useNavBar();
   const handleClick = () => {
-    setNavLink("#contact");
-    if (navLink === "Contact") setIsMenuOpen(false);
+    setNavLink(prev=> prev === "#contact" ?prev:   "#contact");
+     setIsMenuOpen(false);
   };
 
   return (

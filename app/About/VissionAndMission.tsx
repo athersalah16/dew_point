@@ -22,7 +22,7 @@ function VissionAndMission() {
               our {item.title}
             </h2>
           </div>
-          <div className="w-1/2 hover:cursor-text text-sm">{item.value}</div>
+          <div className="w-1/2 hover:cursor-text text-gray-500 text-sm">{item.value}</div>
         </div>
       ))}
     </div>

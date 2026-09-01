@@ -33,6 +33,12 @@ function WhyDewPointSection() {
             From RFQ to Delivery
           </h3>
 
+          <div className="w-full flex flex-wrap justify-center text-lg lg:text-2xl font-bold items-center gap-4 text-blue-700/85">
+            <p>✓ Technical Coordination </p>
+            <p> ✓ Quality & Compliance</p>
+            <p>✓ End-to-End Visibility</p>
+          </div>
+
           <div className="w-full flex justify-center items-center">
             <RFQToDelivery />
           </div>
