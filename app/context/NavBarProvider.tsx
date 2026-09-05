@@ -1,20 +1,18 @@
 "use client";
-import { useContext, useEffect, useState } from "react";
+import { useContext, useState } from "react";
 import { NavBarContext } from "./NavBarContext";
+import {usePathname} from "next/navigation";
 
 type Props = { children: React.ReactNode };
 
 function NavBarProvider({ children }: Props) {
-  
-  const [navLink, setNavLink] = useState<string>('#');
+  const pathname = usePathname()
 
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
 
- 
-
   return (
     <NavBarContext.Provider
-      value={{ navLink, setNavLink, isMenuOpen, setIsMenuOpen }}
+      value={{ pathname, isMenuOpen, setIsMenuOpen }}
     >
       {children}
     </NavBarContext.Provider>

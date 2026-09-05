@@ -5,10 +5,11 @@ import NavLinks from "./NavLinks";
 import RequestQouteButton from "../components/RequestQouteButton";
 import { X, Menu } from "lucide-react";
 import { useNavBar } from "../context/NavBarProvider";
+import ChatOnWhatsappButton from "../Contact/components/ChatOnWhatsappButton";
 
 function Header() {
   const [isScrolled, setIsScrolled] = useState<boolean>(false);
-  const { navLink, setIsMenuOpen, isMenuOpen } = useNavBar();
+  const {  setIsMenuOpen, isMenuOpen } = useNavBar();
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
@@ -33,7 +34,7 @@ function Header() {
       <div className="hidden lg:flex ">
         <NavLinks
           navLinkStyle="bg-blue-500 text-white"
-          navLink={navLink}
+         
           className="flex-row gap-4 "
           textStyle={textStyle}
         />
@@ -47,16 +48,19 @@ function Header() {
       </div>
       {isMenuOpen && (
         <div
-          className={`lg:hidden min-h-screen fixed top-16 left-0 w-full py-3  px-4 rounded-md bg-zinc-50 shadow-xl transition-transform duration-300 ${isMenuOpen ? "translate-y-0" : "-translate-y-full"}`}
+          className={`lg:hidden min-h-screen fixed top-16 left-0 w-full py-3  px-4 rounded-md bg-zinc-50 shadow-xl  transition-transform duration-300 ${isMenuOpen ? "translate-y-0" : "-translate-y-full"}`}
         >
           <NavLinks
             handleMenuClick={setIsMenuOpen}
             navLinkStyle="bg-blue-500 text-white"
-            navLink={navLink}
+         
             textStyle={textStyle}
             className="flex-col hover:text-blue-950 hover:bg-gray-100 gap-4 py-4"
           />
-          <RequestQouteButton />
+         <div className="flex flex-col gap-4">
+           <RequestQouteButton />
+          <ChatOnWhatsappButton/>
+         </div>
         </div>
       )}
       <div className="hidden lg:flex">

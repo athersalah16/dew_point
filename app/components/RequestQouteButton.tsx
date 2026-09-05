@@ -1,17 +1,16 @@
 import { useNavBar } from "../context/NavBarProvider";
 
 function RequestQouteButton() {
-  const { setNavLink, setIsMenuOpen } = useNavBar();
+  const { setIsMenuOpen } = useNavBar();
   const handleClick = () => {
-    setNavLink(prev=> prev === "#contact" ?prev:   "#contact");
      setIsMenuOpen(false);
   };
 
   return (
     <a
-      href="#contact"
+      href="/Contact"
       onClick={handleClick}
-      className="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-800 transition-colors duration-300"
+      className="bg-blue-600 text-center text-white px-4 py-2 rounded-md hover:bg-blue-800 transition-colors duration-300"
     >
       Request a Quote
     </a>

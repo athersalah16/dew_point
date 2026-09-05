@@ -22,7 +22,7 @@ function HeroSection() {
           <p className="text-sm text-blue-400 font-semibold tracking-widest uppercase">
             Engineering · Procurement · Industrial Solutions
           </p>
-          <div className="text-5xl font-bold py-4 text-white">
+          <div className="text-5xl  leading-10 font-bold py-4 text-white">
             <p className="text-6xl">Reliable supply</p>
             Technical <br />
             <p className="text-6xl">expertise</p>
@@ -37,7 +37,7 @@ function HeroSection() {
               <Download /> Company Profile
             </a>
             <a
-              href="#services"
+              href="/Services"
               className=" bg-transparent border border-gray-300 hover:bg-blue-600 hover:border-none text-white duration-300 font-bold py-2 px-4 rounded flex flex-row items-center gap-2 w-fit"
             >
               Explore Services

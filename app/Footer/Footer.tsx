@@ -1,13 +1,12 @@
 "use client";
 import Image from "next/image";
-import GetInTouch from "../Contact/GetInTouch";
+import GetInTouch from "../Contact/components/GetInTouch";
 import { useNavBar } from "../context/NavBarProvider";
 import Logo from "../Header/Logo";
 import NavLinks from "../Header/NavLinks";
 
 function Footer() {
   const logoTextStyle = `text-white text-blue-500`;
-  const { navLink } = useNavBar();
 
   return (
     <div className="flex w-full min-h-full  items-center flex-col bg-blue-950  ">
@@ -26,7 +25,6 @@ function Footer() {
         <div>
           <p className="text-gray-400 px-2 ">Navigate</p>
           <NavLinks
-            navLink={navLink}
             navLinkStyle=" text-white"
             className="flex-col"
             textStyle="text-gray-600 hover:text-white"
@@ -48,7 +46,7 @@ function Footer() {
           <div className=" flex lg:flex-row flex-col justify-center gap-4 items-center text-white  text-sm">
             <div className="w-12 h-8 bg-white p-2 rounded-md">
               <Image
-                src={"/icv_logo.png"}
+                src={"/icv_certification/icv_logo.png"}
                 alt="ICV Image"
                 width={50}
                 height={50}
@@ -60,7 +58,7 @@ function Footer() {
             {" "}
             <div className="w-12 h-12 bg-white p-2 rounded-md">
               <Image
-                src={"/iso_logo.png"}
+                src={"/iso_certification/iso_logo.png"}
                 alt="ISO Image"
                 width={50}
                 height={50}

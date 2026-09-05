@@ -1,25 +1,14 @@
-import AboutSection from "./About/AboutSection";
-import ContactSection from "./Contact/ContactSection";
-import Header from "./Header/Header";
+import WhoWeAre from "./about/components/WhoWeAre";
+import ContactSection from "./Contact/components/ContactSection";
 import HeroSection from "./Hero/HeroSection";
-import IndustrialSection from "./Industries/IndustrialSection";
-import OurGlobalReachSection from "./our_global_reach/OurGlobalReachSection";
-import ProjectsSection from "./Projects/ProjectsSection";
-import ServicesSection from "./Services/ServicesSection";
-import WhyDewPointSection from "./WhyDewPoint/WhyDewPointSection";
+
 
 export default function Home() {
   return (
-    <div className="w-full space-y-24   min-h-screen bg-white">
-      <Header />
+    <div className="w-full py-6   min-h-screen bg-white">
       <HeroSection />
-      <AboutSection />
-      <ServicesSection />
-      <IndustrialSection />
-      <ProjectsSection />
-      <OurGlobalReachSection/>
-      <WhyDewPointSection />
-      <ContactSection />
+      <WhoWeAre/>
+      
     </div>
   );
 }

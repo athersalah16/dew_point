@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { navLinks } from "../company_data/navLinks";
+import { navLinks } from "../../company_data/navLinks";
 import { useNavBar } from "../context/NavBarProvider";
 type Props = {
   className: string;
@@ -14,13 +14,11 @@ function NavLinks({
   className,
   textStyle,
   navLinkStyle,
-  navLink,
   handleMenuClick = () => {},
 }: Props) {
-  const { setNavLink } = useNavBar();
+  const { pathname } = useNavBar();
 
-  const handleClick = (name: string) => {
-    setNavLink((prev) => (name === prev ? prev : name));
+  const handleClick = () => {
     if (!handleMenuClick) return;
     handleMenuClick(false);
   };
@@ -28,10 +26,10 @@ function NavLinks({
     <nav className={`flex ${className}`}>
       {navLinks.map(({ name, href }, index) => (
         <a
-          onClick={() => handleClick(href)}
+          onClick={() => handleClick()}
           href={href}
           key={index + 1}
-          className={` ${textStyle} rounded-md px-4  py-2  ${href === navLink ? navLinkStyle : ""}  transition-colors duration-300 text-black/45  `}
+          className={` ${textStyle} rounded-md px-4  py-2  ${href === pathname ? navLinkStyle : ""}  transition-colors duration-300 text-black/45  `}
         >
           {name}
         </a>
