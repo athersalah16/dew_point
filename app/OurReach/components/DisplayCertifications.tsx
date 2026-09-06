@@ -10,13 +10,13 @@ function DisplayCertifications() {
   };
   return (
     <div>
-      <div className="text-xl font-semibold text-blue-700">Certifications</div>
+      <div className="text-4xl text-center font-semibold text-blue-700">Certifications</div>
       <div className="w-full flex lg:justify-center lg:flex-row flex-col py-5 px-4 gap-4">
         {certifications.map(({ src, title, certificateDir }, index) => (
           <div
             onClick={() => handleClick(certificateDir)}
             key={index}
-            className="w-full duration-300 cursor-pointer  rounded-lg border border-blue-200 flex justify-center py-4 transition-transform hover:scale-105 hover:-translate-y-1.5 hover:shadow-blue-100 hover:shadow-xl "
+            className="w-full duration-300 cursor-pointer  rounded-lg border border-blue-200 flex justify-center py-4 transition-transform hover:scale-105 hover:-translate-y-1.5 hover:shadow-blue-100 hover:shadow-xl gap-4"
           >
             <Image
               src={src}

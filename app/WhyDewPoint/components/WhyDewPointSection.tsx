@@ -7,11 +7,11 @@ function WhyDewPointSection() {
   return (
     <BaseSection sectionID="why-dew-point" title="why dew point">
       <div className="flex flex-col gap-5">
-        <div className="px-3 py-6">
-          <h1 className="text-blue-600 text-2xl font-semibold ">
+        <div className="px-3 py-6 flex justify-center items-center gap-3 flex-col">
+          <h1 className="text-blue-600 text-4xl font-semibold ">
             One Partner. Multiple Solutions.
           </h1>
-          <p className="text-gray-500 text-sm">
+          <p className="text-gray-500  max-w-md text-center text-sm">
             Dew Point delivers value through technical expertise, global
             sourcing strength, and a commitment to quality, reliability, and
             responsive project support.
@@ -28,7 +28,7 @@ function WhyDewPointSection() {
           ))}{" "}
         </div>
         <div className="flex flex-col gap-2 w-full justify-center items-center  ">
-          <h3 className="text-blue-700 font-bold text-3xl lg:text-4xl text-center ">
+          <h3 className="text-blue-700 font-bold text-4xl lg:text-4xl text-center ">
             From RFQ to Delivery
           </h3>
 

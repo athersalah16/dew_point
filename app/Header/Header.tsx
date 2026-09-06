@@ -22,7 +22,7 @@ function Header() {
     setIsMenuOpen((prev) => !prev);
   };
 
-  const textStyle = "hover:text-white hover:bg-blue-500";
+  const textStyle = "hover:border-b hover:border-b-blue-500  hover:text-blue-600 bg-transparent";
   return (
     <div
       className={`flex fixed flex-row items-center justify-between w-full px-4 py-2   z-50 bg-white ${isScrolled ? " border-gray-300  shadow-md lg:shadow-lg shadow-gray-300 " : " border-gray-200 "} border-b  transition-all duration-300`}
@@ -31,9 +31,9 @@ function Header() {
         <Logo className="text-blue-400" />
       </div>
 
-      <div className="hidden lg:flex ">
+      <div className="hidden   lg:flex ">
         <NavLinks
-          navLinkStyle="bg-blue-500 text-white"
+          selectedNavLinkStyle="border-b border-b-blue-500  text-blue-600 bg-transparent "
          
           className="flex-row gap-4 "
           textStyle={textStyle}
@@ -52,8 +52,7 @@ function Header() {
         >
           <NavLinks
             handleMenuClick={setIsMenuOpen}
-            navLinkStyle="bg-blue-500 text-white"
-         
+            selectedNavLinkStyle={`border-b border-b-blue-500  text-blue-600 bg-transparent `}
             textStyle={textStyle}
             className="flex-col hover:text-blue-950 hover:bg-gray-100 gap-4 py-4"
           />

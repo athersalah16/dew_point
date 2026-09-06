@@ -10,7 +10,7 @@ function ProcessTimeline({ data, index, className }: Props) {
 
   return (
     <div
-      className={`px-4 py-2   border-b border-b-blue-300 md:border-b-0 ${index !== 0 ? "  md:border-l md:border-l-blue-300  lg:border-l lg:border-l-blue-300" : ""}`}
+      className={`px-4 py-2   md:border-0 ${index !== 0 ? " border-b border-b-blue-300 md:border-l md:border-l-blue-300 lg:border-l lg:border-l-blue-300" : " border-b border-b-blue-300"}`}
     >
       <Icon
         aria-hidden="true"

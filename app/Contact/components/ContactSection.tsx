@@ -7,7 +7,7 @@ import ChatOnWhatsappButton from "./ChatOnWhatsappButton";
 function ContactSection() {
   return (
     <BaseSection title="contact" sectionID="contact">
-      <div className="flex flex-col gap-6 ">
+      <div className="flex flex-col py-6 gap-6 ">
         <div>
           {" "}
           <h1 className="text-2xl lg:text-3xl   text-center font-bold text-blue-900 ">

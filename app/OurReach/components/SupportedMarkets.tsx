@@ -1,5 +1,5 @@
+import { MarketKey } from "@/company_data/market_positions/marketPositions";
 import React, { useState } from "react";
-import { MarketKey } from "../../market_positions/marketPositions";
 
 type Props = {
   setActiveMarket: React.Dispatch<React.SetStateAction<MarketKey  | string>>;

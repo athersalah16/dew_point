@@ -3,11 +3,11 @@ import { vissionAndMission } from "../../../company_data/whoWeAre";
 
 function VissionAndMission() {
   return (
-    <div className="flex  lg:flex-row py-5 flex-col gap-5">
+    <div className="flex  py-5 px-4  lg:flex-row flex-col gap-5">
       {vissionAndMission.map((item, index) => (
         <div
           key={index}
-          className="flex flex-col w-full  lg:max-w-md max-h-max justify-center items-center border-gray-200 border rounded-lg shadow-lg px-4 gap-5 py-5 duration-300 cursor-pointer text-black"
+          className="flex flex-col w-full  lg:max-w-md  justify-center items-center border-gray-200 border rounded-lg shadow-lg px-4 gap-5 py-5 hover:bg-[#185582] hover:text-[#E2E8F0]  transition-all  hover:-translate-y-1.5 duration-300 cursor-pointer text-gray-400"
         >
           <div className="flex flex-row text-2xl gap-2">
             <div className="w-12 h-12 bg-blue-600 font-bold rounded-full flex justify-center items-center">
@@ -22,7 +22,7 @@ function VissionAndMission() {
               our {item.title}
             </h2>
           </div>
-          <div className="w-1/2 hover:cursor-text text-gray-500 text-sm">{item.value}</div>
+          <div className="w-full lg:w-1/2 hover:cursor-text text-sm">{item.value}</div>
         </div>
       ))}
     </div>

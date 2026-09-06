@@ -6,15 +6,13 @@ As a UAE ICV-Certified company, we create local value while delivering dependabl
 
 export const vissionAndMission: VissionAndMission[] = [
   {
-    title: "vission",
-    value: ` To become a trusted regional partner for industrial supply and
-              project solutions, recognized for reliability, technical
-              capability, and long-term customer value.`,
+    title: "mission",
+    value: `   To simplify project procurement by connecting our clients with reliable products, trusted manufacturers, technical expertise, and efficient supply-chain solutions through one trusted partner.
+`,
   },
   {
-    title: "mission",
-    value: `   To simplify project procurement by connecting our clients with
-              reliable products, manufacturers, technical expertise, and
-              efficient supply-chain solutions under one trusted partner`,
+    title: "vission",
+    value: ` To become a trusted regional partner for industrial supply and project solutions, recognized for reliability, technical expertise, and lasting value for our customers.
+`,
   },
 ];

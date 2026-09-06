@@ -1,7 +1,7 @@
 import React from "react";
 type Props = {
   firstTitle: string;
-  secondTitle: string;
+  secondTitle?: string;
   description: string;
 };
 function ServicesAndIndustrialTitle({
@@ -11,7 +11,9 @@ function ServicesAndIndustrialTitle({
 }: Props) {
   return (
     <div className="w-full flex justify-center items-center flex-col">
-      <h2 className="text-4xl text-blue-400  font-bold leading-tight  sm:text-4xl lg:text-5xl">
+      <h2
+        className={`text-4xl ${secondTitle ? "text-blue-400 " : "text-blue-800"} font-bold leading-tight  sm:text-4xl lg:text-5xl`}
+      >
         {firstTitle}
         <br />
         <span className="text-blue-900">{secondTitle}</span>

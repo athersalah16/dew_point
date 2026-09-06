@@ -7,7 +7,9 @@ function MajorClients({ image }: { image: string }) {
     >
       <Image
         src={`/major_clients/${image}`}
-        alt={image.replace(".png", "")}
+        alt={image
+          
+        }
         width={180}
         height={100}
         className="max-h-20 w-full  max-w-[160px] object-contain transition-transform duration-300 group-hover:scale-105"

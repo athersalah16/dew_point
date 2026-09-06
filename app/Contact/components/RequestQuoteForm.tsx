@@ -3,7 +3,6 @@ import { useRef, useState } from "react";
 import { getTheData } from "../../utils/getFormData";
 import { validateForm } from "../../utils/validateData";
 import emailjs from "@emailjs/browser";
-import { toast } from "@/components/ui/toast";
 
 function RequestQuoteForm() {
   const [error, setError] = useState<string>("");
@@ -55,6 +54,7 @@ function RequestQuoteForm() {
         {" "}
         Request a Quote{" "}
       </h1>
+      {error && <p className="text-red-500 text-center font-semibold text-2xl my-3">{error}</p>}
       {success && (
         <p className="text-lg lg:text-2xl text-center text-green-500">
           Request submitted successfully!

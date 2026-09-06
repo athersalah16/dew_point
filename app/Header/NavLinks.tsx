@@ -5,15 +5,15 @@ import { useNavBar } from "../context/NavBarProvider";
 type Props = {
   className: string;
   textStyle: string;
-  navLink?: string;
-  navLinkStyle: string;
+ 
+  selectedNavLinkStyle: string;
   handleClick?: React.Dispatch<React.SetStateAction<string>>;
   handleMenuClick?: React.Dispatch<React.SetStateAction<boolean>>;
 };
 function NavLinks({
   className,
   textStyle,
-  navLinkStyle,
+  selectedNavLinkStyle,
   handleMenuClick = () => {},
 }: Props) {
   const { pathname } = useNavBar();
@@ -29,7 +29,7 @@ function NavLinks({
           onClick={() => handleClick()}
           href={href}
           key={index + 1}
-          className={` ${textStyle} rounded-md px-4  py-2  ${href === pathname ? navLinkStyle : ""}  transition-colors duration-300 text-black/45  `}
+          className={` ${textStyle}  px-4  py-2  ${href === pathname ? selectedNavLinkStyle : ""}  transition-colors duration-300 text-black/45  `}
         >
           {name}
         </a>

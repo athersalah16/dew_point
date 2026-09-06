@@ -25,7 +25,7 @@ function Footer() {
         <div>
           <p className="text-gray-400 px-2 ">Navigate</p>
           <NavLinks
-            navLinkStyle=" text-white"
+            selectedNavLinkStyle=" text-white"
             className="flex-col"
             textStyle="text-gray-600 hover:text-white"
           />
