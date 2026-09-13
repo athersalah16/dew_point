@@ -1,4 +1,4 @@
-import ProcessTimeline from "@/app/components/ProcessTimeline";
+import ProcessTimeline from "@/app/common/components/ProcessTimeline";
 import { coreValues } from "@/company_data/coreValues";
 import React from "react";
 

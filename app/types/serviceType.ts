@@ -1,7 +1,16 @@
-import { LucideIcon } from "lucide-react";
+export type IconName =
+  | "GiValve"
+  | "Cable"
+  | "Cog"
+  | "Construction"
+  | "ShieldCheck"
+  | "Factory"
+  | "Zap"
+  | "Lightbulb";
 
 export type Service = {
-  icon: LucideIcon| any;
+  icon: IconName;
   text: string;
+  category?: string;
   description: string;
 };

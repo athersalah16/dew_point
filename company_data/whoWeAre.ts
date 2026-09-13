@@ -2,7 +2,7 @@ export const whoWeAre = `Established in 2024, Dew Point is a UAE-based supply an
 We deliver reliable PVF, Electrical & Instrumentation, Mechanical, Industrial, Civil, and HSE solutions.
 Our global sourcing, procurement, logistics, and technical expertise ensure quality and competitive project support.
 As a UAE ICV-Certified company, we create local value while delivering dependable solutions from enquiry to final delivery.
-.`;
+`;
 
 export const vissionAndMission: VissionAndMission[] = [
   {

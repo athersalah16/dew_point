@@ -4,6 +4,7 @@ import GetInTouch from "../Contact/components/GetInTouch";
 import { useNavBar } from "../context/NavBarProvider";
 import Logo from "../Header/Logo";
 import NavLinks from "../Header/NavLinks";
+import ChatOnWhatsappButton from "../Contact/components/ChatOnWhatsappButton";
 
 function Footer() {
   const logoTextStyle = `text-white text-blue-500`;
@@ -33,6 +34,9 @@ function Footer() {
         <div>
           <p className="text-gray-400 py-3 px-2">Get in Touch</p>
           <GetInTouch className="text-white" />
+          <div className="py-3 pl-3">
+            <ChatOnWhatsappButton/>
+          </div>
         </div>
       </div>
 

@@ -3,63 +3,56 @@ import { useRef, useState } from "react";
 import { getTheData } from "../../utils/getFormData";
 import { validateForm } from "../../utils/validateData";
 import emailjs from "@emailjs/browser";
+import { toast } from "sonner";
 
 function RequestQuoteForm() {
-  const [error, setError] = useState<string>("");
+  const [error, setError] = useState<boolean>(false);
   const formRef = useRef<HTMLFormElement>(null);
   const [loading, setLoading] = useState<boolean>(false);
-  const [success, setSuccess] = useState<boolean>(false);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
+    try {
+      e.preventDefault();
 
-    const data = getTheData(formRef);
+      if (!formRef.current) return;
+      const data = getTheData(formRef);
 
-    const validationError = validateForm(data);
-    if (validationError) {
-      setError(validationError);
-      return;
-    }
-    setLoading(true);
+      const validateError = validateForm(data);
+      if (validateError) {
+        setError(true);
+        toast.error(validateError);
+        return;
+      }
+      setLoading(true);
 
-    setError("");
-    setSuccess(false);
-    const RFQData = {
-      name: data?.name,
-      company_name: data?.company_name,
-      email: data?.email,
-      phone: data?.phone,
-      message: data?.project_requirements,
-      subject: data?.subject,
-    };
-    const response = await emailjs.send(
-      process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
-      process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
-      RFQData,
-      process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!,
-    );
+      const response = await emailjs.sendForm(
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
+        formRef.current,
+        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!,
+      );
 
-    if (response.status === 200) {
+      if (response.status === 200) {
+        setError(false);
+        formRef.current?.reset();
+        toast.success("Request Sent Successfully!");
+        return;
+      }
+    } catch {
       setLoading(false);
-      formRef.current?.reset();
-      setSuccess(true);
-      return;
+      toast.error("Failed to send the email");
+    } finally {
+      setLoading(false);
     }
   };
 
-  const textStyle = `outline-none border text-black border-gray-300 rounded-md py-2 px-4 focus:ring-2  focus:ring-blue-500 ${error ? "focus:ring-red-500 border-red-500 focus:ring-2 " : ""}`;
+  const textStyle = `outline-none border text-black border-gray-300 rounded-md py-2 px-4 focus:ring-2  focus:ring-blue-500 
+  ${error && "focus:ring-red-500 border-red-500 focus:ring-2 "}`;
   return (
     <div className="w-full lg:w-[45%] bg-gray-100 p-1 lg:p-8  rounded-lg shadow-md">
       <h1 className="text-blue-950 py-2 lg:pb-2 text-xl lg:text-3xl font-bold text-center">
-        {" "}
-        Request a Quote{" "}
+        Request a Quote
       </h1>
-      {error && <p className="text-red-500 text-center font-semibold text-2xl my-3">{error}</p>}
-      {success && (
-        <p className="text-lg lg:text-2xl text-center text-green-500">
-          Request submitted successfully!
-        </p>
-      )}
 
       <form
         ref={formRef}
@@ -106,7 +99,7 @@ function RequestQuoteForm() {
           placeholder=" Describe your project requirements: "
           className={`ml-5 ${textStyle}`}
           rows={4}
-        ></textarea>
+        />
 
         <button
           type="submit"

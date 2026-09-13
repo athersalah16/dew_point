@@ -1,5 +1,5 @@
 "use client";
-import BaseSection from "../../components/BaseSection";
+import BaseSection from "@/app/common/components/BaseSection";
 import SupportedMarkets from "./SupportedMarkets";
 import { useState } from "react";
 import DisplayCertifications from "./DisplayCertifications";

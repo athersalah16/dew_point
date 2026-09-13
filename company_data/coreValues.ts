@@ -1,3 +1,4 @@
+import { coreValue } from "@/app/types/coreValue";
 import {
 	BarChart3,
 	Handshake,
@@ -6,7 +7,6 @@ import {
 	Scale,
 	ShieldCheck,
 } from "lucide-react";
-import type { coreValue } from "../types/coreValue";
 
 export const coreValues: coreValue[] = [
 	{

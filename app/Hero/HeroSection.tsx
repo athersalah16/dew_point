@@ -1,4 +1,4 @@
-import BaseSection from "../components/BaseSection";
+import BaseSection from "@/app/common/components/BaseSection";
 import { Download } from "lucide-react";
 
 function HeroSection() {

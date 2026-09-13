@@ -1,3 +1,4 @@
+import { Toaster } from "@/components/ui/sonner";
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
 
@@ -7,5 +8,10 @@ export const metadata: Metadata = {
 };
 
 export default function layout({ children }: { children: ReactNode }) {
-  return children;
+  return (
+    <div>
+      <Toaster position="top-center" theme="dark" richColors />
+      {children}
+    </div>
+  );
 }

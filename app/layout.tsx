@@ -5,7 +5,7 @@ import Footer from "./Footer/Footer";
 import NavBarProvider from "./context/NavBarProvider";
 import { Toaster } from "@/components/ui/toast";
 import Header from "./Header/Header";
-import ContactUs from "./components/ContactUs";
+import ContactUs from "@/app/common/components/ContactUs";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",

@@ -1,15 +1,18 @@
-import React from "react";
-import BaseSection from "../../components/BaseSection";
+'use client'
+import BaseSection from "@/app/common/components/BaseSection";
 import { services } from "../../../company_data/services";
-import ServicesAndIndustries from "../../components/ServicesAndIndustries";
-import ServicesAndIndustrialTitle from "@/app/components/ServicesAndIndustrialTitle";
+import ServicesAndIndustries from "@/app/common/components/ServicesAndIndustries";
+import ServicesAndIndustrialTitle from "@/app/common/components/ServicesAndIndustrialTitle";
 import IndustrialSection from "@/app/Industries/IndustrialSection";
+import { useRouter } from "next/navigation";
 
 function ServicesSection() {
+  const router = useRouter();
   const industrialDescription = ` 
 Comprehensive sourcing and supply solutions tailored to the technical,
    commercial, and delivery requirements of industrial and EPC projects.
    `;
+
   return (
     <BaseSection title="services" sectionID="services">
       <div className="w-full gap-5 flex flex-col">
@@ -20,7 +23,12 @@ Comprehensive sourcing and supply solutions tailored to the technical,
         />
         <div className="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 px-8 py-6  gap-4">
           {services.map((service, index) => (
-            <ServicesAndIndustries key={index + 1} id={index} data={service} />
+            <ServicesAndIndustries
+              router={router}
+              key={index + 1}
+              id={index}
+              data={service}
+            />
           ))}
         </div>
       </div>

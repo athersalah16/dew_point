@@ -4,11 +4,11 @@ import { Certification } from "@/app/types/Certification";
     {
       src: "/icv_certification/ICV.png",
       certificateDir: "/icv_certification/icv_certificate.png",
-      title:"ICV Certified"
+      title:"ICV "
     },
     {
-      src: "/iso_certification/ISO.png",
+      src: "/iso_certification/iso_logo.png",
       certificateDir: "/iso_certification/iso_certificate.png",
-      title:"ISO 9001:2015 Certified"
+      title:"ISO 9001:2015 "
     },
   ];

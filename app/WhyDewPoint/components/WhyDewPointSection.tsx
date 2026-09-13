@@ -1,6 +1,6 @@
 import { whyDewPoint } from "../../../company_data/why_dew_point";
-import BaseSection from "../../components/BaseSection";
-import ProcessTimeline from "../../components/ProcessTimeline";
+import BaseSection from "@/app/common/components/BaseSection";
+import ProcessTimeline from "@/app/common/components/ProcessTimeline";
 import RFQToDelivery from "./RFQToDelivery";
 
 function WhyDewPointSection() {

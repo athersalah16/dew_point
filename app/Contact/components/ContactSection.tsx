@@ -1,4 +1,4 @@
-import BaseSection from "../../components/BaseSection";
+import BaseSection from "@/app/common/components/BaseSection";
 import HowCanWeHelp from "./HowCanWeHelp";
 import RequestQuoteForm from "./RequestQuoteForm";
 import GetInTouch from "./GetInTouch";

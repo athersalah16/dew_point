@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import Logo from "./Logo";
 import NavLinks from "./NavLinks";
-import RequestQouteButton from "../components/RequestQouteButton";
+import RequestQouteButton from "@/app/common/components/RequestQouteButton";
 import { X, Menu } from "lucide-react";
 import { useNavBar } from "../context/NavBarProvider";
 import ChatOnWhatsappButton from "../Contact/components/ChatOnWhatsappButton";

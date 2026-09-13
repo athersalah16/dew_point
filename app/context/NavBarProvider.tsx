@@ -7,12 +7,12 @@ type Props = { children: React.ReactNode };
 
 function NavBarProvider({ children }: Props) {
   const pathname = usePathname()
-
+  const basePath = `/${pathname.split("/")[1]}`;
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
 
   return (
     <NavBarContext.Provider
-      value={{ pathname, isMenuOpen, setIsMenuOpen }}
+      value={{ basePath, isMenuOpen, setIsMenuOpen }}
     >
       {children}
     </NavBarContext.Provider>

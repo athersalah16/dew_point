@@ -10,7 +10,9 @@ function DisplayCertifications() {
   };
   return (
     <div>
-      <div className="text-4xl text-center font-semibold text-blue-700">Certifications</div>
+      <div className="text-4xl text-center font-semibold text-blue-700">
+        Certifications
+      </div>
       <div className="w-full flex lg:justify-center lg:flex-row flex-col py-5 px-4 gap-4">
         {certifications.map(({ src, title, certificateDir }, index) => (
           <div
@@ -21,7 +23,7 @@ function DisplayCertifications() {
             <Image
               src={src}
               alt={`${title} Certififed`}
-              width={250}
+              width={title === "ICV" ? 250 : 200}
               height={250}
               className="rounded-md"
             />
