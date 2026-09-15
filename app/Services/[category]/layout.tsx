@@ -8,7 +8,8 @@ export const metadata: Metadata = {
 
 
 function ProductsLayout({ children }: { children: React.ReactNode }) {
-  return children;
+  return children
+  
 }
 
 export default ProductsLayout;

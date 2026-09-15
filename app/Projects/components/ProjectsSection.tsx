@@ -3,19 +3,13 @@ import BaseSection from "@/app/common/components/BaseSection";
 import MajorClients from "./MajorClients";
 import { projects } from "../../../company_data/projectsExperience";
 import Project from "./Project";
+import { MajorClientsType } from "@/app/types/MajorClients";
+import { majorClients } from "@/company_data/majorClients";
 
 function ProjectsSection() {
-  const majorClientsImages: string[] = [
-    "adnoc.png",
-    "petrojet.png",
-    "enppi.png",
-    "target.png",
-    "orascom.png",
-    "hassan_allam.png",
-  ];
   return (
     <BaseSection title="projects" sectionID="projects">
-      <div className="w-full flex  flex-col gap-7 px-5">
+      <div className="w-full flex pt-5 flex-col gap-7 px-5">
         {/* Major Clients  */}
         <div className="text-center flex justify-center items-center flex-col gap-5 w-full">
           <h1 className="text-blue-900 text-5xl font-bold ">
@@ -33,8 +27,8 @@ function ProjectsSection() {
           Major Clients{" "}
         </span>
         <div className="grid  grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 rounded-md lg:px-10">
-          {majorClientsImages.map((image) => (
-            <MajorClients image={image} key={image} />
+          {majorClients.map(({ image, clientLink }: MajorClientsType) => (
+            <MajorClients image={image} key={image} link={clientLink} />
           ))}
         </div>
 

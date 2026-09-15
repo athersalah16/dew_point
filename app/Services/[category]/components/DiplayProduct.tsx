@@ -12,6 +12,7 @@ function DiplayProduct({ data }: Props) {
     <div className=" h-full w-full lg:max-w-md overflow-hidden rounded-md border border-blue-200 hover:cursor-pointer transition-transform hover:scale-105 hover:-translate-y-1.5 duration-300">
       <div className="relative h-[80%] w-full border-b border-b-blue-200">
         <Image
+        loading="lazy"
           src={image}
           width={100}
           height={100}
@@ -22,11 +23,11 @@ function DiplayProduct({ data }: Props) {
       <p
         className={`p-2 text-blue-900 font-semibold text-center ${title.length > 8 ? "text-lg " : "text-2xl"} hover:cursor-text`}
       >
-        {" "}
+
         {switchToTitle(title)}
       </p>
 
-      <p className="px-3 py-1 text-blue-900 text-end   text-sm">{category}</p>
+      <div className="flex items-center px-2 py-4 justify-end  text-blue-900 text-end hover:cursor-text   text-sm">{switchToTitle(category)}</div>
     </div>
   );
 }

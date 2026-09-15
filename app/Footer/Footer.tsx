@@ -48,7 +48,7 @@ function Footer() {
         <div className=" flex   flex-row gap-6">
           {" "}
           <div className=" flex lg:flex-row flex-col justify-center gap-4 items-center text-white  text-sm">
-            <div className="w-12 h-8 bg-white p-2 rounded-md">
+            <div className="w-12 h-8 flex justify-center items-center bg-white p-2 rounded-md">
               <Image
                 src={"/icv_certification/icv_logo.png"}
                 alt="ICV Image"

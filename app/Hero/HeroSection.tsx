@@ -1,7 +1,11 @@
 import BaseSection from "@/app/common/components/BaseSection";
 import { Download } from "lucide-react";
+import { toast } from "sonner";
 
 function HeroSection() {
+  const handleClick = ()=>{
+    toast.success("Company Profile downloded Sucessfully")
+  }
   return (
     <BaseSection sectionID="/" className="relative mt-16 overflow-hidden">
       {/* Ken Burns Background */}
@@ -32,6 +36,7 @@ function HeroSection() {
             <a
               href="/company_profile.pdf"
               download
+              onClick={handleClick}
               className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded flex flex-row items-center gap-2 w-fit"
             >
               <Download /> Company Profile

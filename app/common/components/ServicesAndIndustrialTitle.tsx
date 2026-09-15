@@ -10,7 +10,7 @@ function ServicesAndIndustrialTitle({
   description,
 }: Props) {
   return (
-    <div className="w-full flex justify-center items-center flex-col">
+    <div className="w-full pt-5 flex justify-center items-center flex-col">
       <h2
         className={`text-4xl ${secondTitle ? "text-blue-400 " : "text-blue-800 "} font-bold leading-tight  sm:text-4xl lg:text-5xl`}
       >

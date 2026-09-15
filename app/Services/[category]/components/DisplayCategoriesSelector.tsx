@@ -1,3 +1,4 @@
+import { switchToTitle } from "@/app/utils/switchToTitle";
 import {
   Select,
   SelectContent,
@@ -18,8 +19,8 @@ export default function DisplayCategoriesSelectors({
 }: Props) {
   return (
     <Select>
-      <SelectTrigger className="w-full max-w-48">
-        {selectedCategory}
+      <SelectTrigger className="w-full ">
+        {switchToTitle(selectedCategory)}
       </SelectTrigger>
       <SelectContent>
         <SelectGroup>

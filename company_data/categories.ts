@@ -43,7 +43,7 @@ export const allCategories = {
     "Electrical Installation",
     "Electrical Testing",
     "Industrial Plugs, Sockets & Connections",
-    "Lightning & Lightning Accessories",
+    "Lighting & Lightning Accessories",
     "LV Switchers",
   ],
 } as const;

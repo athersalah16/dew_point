@@ -18,15 +18,16 @@ function DisplayCertifications() {
           <div
             onClick={() => handleClick(certificateDir)}
             key={index}
-            className="w-full duration-300 cursor-pointer  rounded-lg border border-blue-200 flex justify-center py-4 transition-transform hover:scale-105 hover:-translate-y-1.5 hover:shadow-blue-100 hover:shadow-xl gap-4"
+            className="w-full min-h-70 duration-300 cursor-pointer  rounded-lg border border-blue-200 flex items-center justify-center py-4 transition-transform hover:scale-105 hover:-translate-y-1.5 hover:shadow-blue-100 hover:shadow-xl gap-4"
           >
-            <Image
-              src={src}
-              alt={`${title} Certififed`}
-              width={title === "ICV" ? 250 : 200}
-              height={250}
-              className="rounded-md"
-            />
+            <div className="relative w-40 h-40">
+              <Image
+                src={src}
+                alt={`${title} Certififed`}
+                fill
+                className="rounded-md object-contain"
+              />
+            </div>
           </div>
         ))}
       </div>

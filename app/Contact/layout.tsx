@@ -8,10 +8,5 @@ export const metadata: Metadata = {
 };
 
 export default function layout({ children }: { children: ReactNode }) {
-  return (
-    <div>
-      <Toaster position="top-center" theme="dark" richColors />
-      {children}
-    </div>
-  );
+  return children
 }
