@@ -152,7 +152,7 @@ export const PVF: Product[] = [
     category: "Piping Fasteners"
   },
   {
-    image: "/products/PVF/PIPING FASTENERS/WhatsApp Image 2026-09-20 at 3.40.48 PM (1).jpeg",
+    image: "/products/PVF/PIPING FASTENERS/WhatsApp Image 2026-09-20 at 3.40.48 PM (1).png",
     title: "Stud Bolts",
     category: "Piping Fasteners"
   },
@@ -217,7 +217,7 @@ export const PVF: Product[] = [
     category: "Special Project-Specific PVF Items"
   },
   {
-    image: "/products/PVF/SPECIAL  PROJECT-SPECIFIC PVF ITEMS/WhatsApp Image 2026-09-20 at 3.51.53 PM (1).jpeg",
+    image: "/products/PVF/SPECIAL  PROJECT-SPECIFIC PVF ITEMS/WhatsApp Image 2026-09-20 at 3.51.53 PM (1).png",
     title: "Spectacle Blind",
     category: "Special Project-Specific PVF Items"
   },

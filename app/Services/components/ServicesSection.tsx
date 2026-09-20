@@ -15,7 +15,7 @@ Comprehensive sourcing and supply solutions tailored to the technical,
 
   return (
     <BaseSection title="services" sectionID="services">
-      <div className="w-full gap-5 flex flex-col">
+      <div className="w-full gap-5  py-5 flex flex-col">
         <ServicesAndIndustrialTitle
           firstTitle="Integrated Supply."
           secondTitle="Technical Expertise."

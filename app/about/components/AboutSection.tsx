@@ -13,10 +13,10 @@ function AboutSection() {
           About Us
         </div>
         <div className="flex lg:flex-row flex-col ">
-          <div className="w-full lg:w-1/2 px-4 py-5 h-full">
+          <div className="w-full lg:w-1/2 px-1 py-5 h-full">
             <WhoWeAre />
           </div>
-          <div className="h-full ">
+          <div className="h-full  ">
             <VissionAndMission />
           </div>
         </div>
