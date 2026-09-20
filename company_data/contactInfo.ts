@@ -1,4 +1,4 @@
-import { type ContactInfo } from "../types/contactType";
+import { ContactInfo } from "@/app/types/contactType";
 
 export const contactInfo: ContactInfo[] = [
   { text: "info@dewpoint-uae.com", icon: "Mail" ,category:"email"},

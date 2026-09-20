@@ -1,3 +1,4 @@
+import { WhyDewPoint } from "@/app/types/whyDewPoint";
 import {
   Layers3,
   BrainCircuit,
@@ -6,7 +7,6 @@ import {
   Zap,
   Workflow,
 } from "lucide-react";
-import { WhyDewPoint } from "../types/whyDewPoint";
 
 export const whyDewPoint: WhyDewPoint[] = [
   {
