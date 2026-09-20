@@ -4,15 +4,24 @@ import { ProjectType } from "../../types/projectType";
 function Project({ project }: { project: ProjectType }) {
   const { name, id } = project;
   return (
-    <div className="flex justify-between w-full px-4 py-5 gap-3 hover:cursor-pointer  transition-transform hover:scale-105 hover:shadow-xl hover:shadow-blue-100 hover:-translate-y-1 border-indigo-300 border   rounded-md duration-300 ">
-      <div className="w-8 h-8 flex justify-center items-center font-bold  bg-blue-900 text-white rounded-md ">
-        {id}
-      </div>
-      <div className={`text-blue-700  ${name.length >= 8?"text-lg":"text-xl"} font-semibold `}>{name}</div>
-      <div className="flex flex-col">
-        <p className="text-blue-500 text-xs">client</p>
-        <Image src={'/major_clients/adnoc.png'} alt="client logo" width={50} height={50}/>
-        
+    <div className="grid min-h-28 w-full  grid-cols-1 lg:grid-cols-[72px_1fr_72px] items-center gap-3 rounded-md border border-indigo-300 px-4 py-5 transition-transform duration-300 hover:-translate-y-1 hover:cursor-pointer hover:scale-105 hover:shadow-xl hover:shadow-blue-100">
+        <div className="flex h-8 w-8 items-center justify-center rounded-md bg-blue-900 font-bold text-white">
+          {id}
+        </div>
+
+      <p className="max-w-lg text-center font-semibold text-blue-700 hover:cursor-text">
+        {name}
+      </p>
+
+      <div className="flex items-center justify-end">
+        <a href="https://www.adnoc.ae/" rel="noopener noreffer" target="_blank"> <Image
+          src="/major_clients/adnoc.png"
+          alt="ADNOC client logo"
+          width={50}
+          height={50}
+          className="object-contain"
+        /></a>
+       
       </div>
     </div>
   );

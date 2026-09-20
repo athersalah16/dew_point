@@ -6,6 +6,7 @@ function GetInTouch({ className = "" }: { className?: string }) {
   const handleClick = (name: string) => {
     if (name !== "email") return;
 
+
     window.open(
       `https://mail.google.com/mail/u/0/#inbox?compose=new`,
       "_blank",

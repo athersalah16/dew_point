@@ -48,7 +48,7 @@ function ProjectsSection() {
               ))}
             </div>
 
-            <div className=" lg:mt-17 flex justify-center  items-center h-full w-full lg:w-[60%]  rounded-md">
+            <div className=" lg:mt-17 flex justify-center  items-center min-h-full w-full lg:w-[50%]  rounded-md">
               <Image
                 src={"/projects.png"}
                 width={250}
@@ -57,7 +57,7 @@ function ProjectsSection() {
                 className="rounded-md w-full h-full lg:max-h-full object-cover "
               />
             </div>
-          </div>{" "}
+          </div>
         </div>
       </div>
     </BaseSection>

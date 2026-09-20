@@ -1,11 +1,12 @@
 import BaseSection from "@/app/common/components/BaseSection";
+import { sendGAEvent } from "@next/third-parties/google";
 import { Download } from "lucide-react";
 import { toast } from "sonner";
 
 function HeroSection() {
-  const handleClick = ()=>{
-    toast.success("Company Profile downloded Sucessfully")
-  }
+  const handleClick = () => {
+    toast.success("Company Profile downloded Sucessfully");
+  };
   return (
     <BaseSection sectionID="/" className="relative mt-16 overflow-hidden">
       {/* Ken Burns Background */}

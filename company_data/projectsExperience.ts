@@ -1,14 +1,14 @@
+import { ProjectType } from "@/app/types/projectType";
 
-import { ProjectType } from "../types/projectType";
 
 export const projects: ProjectType[] = [
   {
     id: 1,
-    name: "Bu hasa swag for pilot",
+    name: "BU HASA SWAG FOR PILOT",
   },
   {
     id: 2,
-    name: "Wave component 3a",
+    name: "WAVE COMPONENT 3A",
   },
   {
     id: 3,
@@ -16,15 +16,15 @@ export const projects: ProjectType[] = [
   },
   {
     id: 4,
-    name: "Habshan projects",
+    name: "HABSHAN PROJECTS",
   },
   {
     id: 5,
-    name: "Construction of rds-3 & rds-4 and associ aip5",
+    name: "CONSTRUCTION OF RDS-3 & RDS-4 AND ASSOCI AIP5",
   },
   {
     id: 6,
-    name: "Kent-bab far north hdpe liner work pkg2",
+    name: " KENT-BAB FAR NORTH HDPE LINER WORK PKG2",
   },
   {
     id: 7,

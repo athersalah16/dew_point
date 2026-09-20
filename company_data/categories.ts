@@ -1,4 +1,5 @@
 export const allCategories = {
+
   mechanical: [
     "Pumps",
     "Bearings",
@@ -11,6 +12,7 @@ export const allCategories = {
     "Mechanical Project & Maintenance",
     "Welding & Fabrication",
   ],
+
   constructions: [
     "Steel Plates",
     "Rebar Accessories",
@@ -22,18 +24,30 @@ export const allCategories = {
     "Concrete & Masonry Equipment",
     "Site Safety",
   ],
+
   safety: [
     "Personal Protective Equipment (PPE)",
     "Hand Protection",
     "Fall Protection",
     "Hearing Protection",
     "Respiratory Protection",
-    "Site Safety & Traffic",
+    "Site Safety & Traffic Control",
     "Electrical Safety & Specialized HSE",
-    "Gas Detection",
+    "Gas Detection & Monitoring",
     "Fire & Emergency Equipment",
   ],
-  PVF: ["Pipes", "Fittings", "Flanges", "Valves"],
+
+  PVF: [
+    "Pipes",
+    "Pipe Fittings",
+    "Flanges",
+    "Valves",
+    "Gaskets & Sealing Materials",
+    "Pipe Supports & Piping Accessories",
+    "Piping Fasteners",
+    "Special Project-Specific PVF Items",
+  ],
+
   electric: [
     "Cables",
     "Cable Management",
@@ -46,4 +60,5 @@ export const allCategories = {
     "Lighting & Lightning Accessories",
     "LV Switchers",
   ],
+
 } as const;

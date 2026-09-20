@@ -4,7 +4,7 @@ import { Certification } from "@/app/types/Certification";
     {
       src: "/icv_certification/icv_logo.png",
       certificateDir: "/icv_certification/icv_certificate.png",
-      title:"ICV "
+      title:"ICV"
     },
     {
       src: "/iso_certification/iso_logo.png",

@@ -71,8 +71,8 @@ function page() {
           <h1 className="text-center text-4xl  text-blue-600">
             {switchToTitle(section)} Products
           </h1>
-          <div className="flex lg:justify-between flex-col py-3 lg:flex-row px-3">
-            <div className="w-full lg:w-2xl">
+          <div className="flex w-full lg:max-w-5xl gap-4 flex-col py-3 lg:flex-row">
+            <div className="w-full lg:max-w-2xl">
               <Input
                 placeholder="Search in products"
                 className="focus-visible:ring-0 border focus-visible:border-blue-200 text-lg p-4"
@@ -80,35 +80,30 @@ function page() {
                 onChange={(e) => handleOnChange(e)}
               />
             </div>
-            <div className="hidden md:block">
-              <DisplayProductsCatalog sectionName={section} />
+            <div className="w-full lg:w-60">
+              <DisplayCategoriesSelectors
+                selectedCategory={selectedCategory}
+                handleSelectedCategoryChange={handleSelectedCategoryChange}
+                data={categoris}
+              />
             </div>
-             <div className="md:hidden flex w-full py-4 justify-center items-center">
-            <DisplayCategoriesSelectors
-              selectedCategory={selectedCategory}
-              handleSelectedCategoryChange={handleSelectedCategoryChange}
-              data={categoris}
-            />
           </div>
+           <div className="md:hidden block">
+            <DisplayProductsCatalog sectionName={section} />
           </div>
-         
-          <DisplayCategories
-            categoris={categoris}
-            handleSelectedCategoryChange={handleSelectedCategoryChange}
-            selectedCategory={selectedCategory}
-          />
-          <div className="mt-2 md:hidden">
-              <DisplayProductsCatalog sectionName={section} />
-            </div>
         </div>
 
-
-        <p className="text-blue-900 font-extralight">
-          Showing Products: {filteredResults.length}
-        </p>
+        <div className="flex flex-col  lg:flex-row lg:justify-between gap-2 px-3 py-3">
+          <p className="text-blue-900 font-extralight">
+            Showing Products: {filteredResults.length}
+          </p>
+          <div className="hidden md:block">
+            <DisplayProductsCatalog sectionName={section} />
+          </div>
+        </div>
 
         {message && <p className="text-blue-600 text-2xl px-4">{message}</p>}
-
+        {searchTerm && !message &&<p className="text-blue-600 text-2xl px-4">Search Results:</p>}
         <div className="grid gap-4 grid-cols-1 lg:grid-cols-4">
           {filteredResults.map((product: Product, index) => (
             <DiplayProduct key={index} data={product} />

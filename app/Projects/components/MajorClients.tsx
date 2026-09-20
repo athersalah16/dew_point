@@ -4,6 +4,7 @@ import Image from "next/image";
 type Props = { image: string; link: string };
 function MajorClients({ image, link }: Props) {
   const hnadleClick = () => {
+      
     window.open(link, "_blank", "noopener,noreferrer");
   };
   return (
